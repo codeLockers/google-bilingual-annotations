@@ -1,7 +1,7 @@
 library google_bilingual_annotations;
 
 // ignore_for_file: non_constant_identifier_names
-class GoogleSheetCredential {
+class GoogleCredential {
   final String private_key_id;
   final String private_key;
   final String client_email;
@@ -11,7 +11,7 @@ class GoogleSheetCredential {
   final String sheet_name;
   final String sheet_id;
 
-  const GoogleSheetCredential(
+  const GoogleCredential(
       this.private_key_id,
       this.private_key,
       this.client_email,
@@ -21,7 +21,7 @@ class GoogleSheetCredential {
       this.sheet_name,
       this.sheet_id);
 
-  GoogleSheetCredential.fromJson(Map<String?, String?> json)
+  GoogleCredential.fromJson(Map<String?, String?> json)
       : private_key_id = json['private_key_id'] ?? '',
         private_key = json['private_key'] ?? '',
         client_email = json['client_email'] ?? '',
@@ -32,9 +32,9 @@ class GoogleSheetCredential {
         sheet_id = json['sheet_id'] ?? '';
 }
 
-class Googleable {
+class GoogleBilingual {
   final List<String> paths;
   final Map<String, String> credential;
 
-  const Googleable(this.paths, this.credential);
+  const GoogleBilingual(this.paths, this.credential);
 }
