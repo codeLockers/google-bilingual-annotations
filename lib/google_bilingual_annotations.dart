@@ -7,6 +7,9 @@ class GoogleBilingual {
   final String locale;
   //credential for google auth
   final Map<String, String> credential;
+  //remove useless translations
+  final bool removeUseless;
 
-  const GoogleBilingual(this.paths, this.locale, this.credential);
+  const GoogleBilingual(
+      this.paths, this.locale, this.credential, this.removeUseless);
 }
